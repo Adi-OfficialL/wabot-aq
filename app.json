@@ -1,0 +1,43 @@
+{
+  "name": "Bot WhatsApp",
+  "description": "[wabot-aq] A modular WhatsApp Bot running on nodejs with an sqlalchemy database.",
+  "logo": "https://i.ibb.co/KhLWz5P/photo-2020-02-28-22-03-27.jpg",
+  "keywords": [
+    "whatsapp",
+    "whatsapp-bot",
+    "plugin",
+    "modular",
+    "productivity"
+  ],
+  "repository": "https://github.com/Nurutomo/wabot-aq",
+  "website": "https://wa.me/6289504585790",
+  "success_url": "https://wa.me/6289504585790",
+  "env": {
+    "API_KEY": {
+      "description": "Get this value from https://api.xteam.xyz",
+      "required": true
+    },
+    "API_CALIPH": {
+      "description": "Get this value from https://wa.me/6289504585790",
+      "required": true
+    },
+    "OWNER_NUMBER": {
+      "description": "YOUR WHATSAPP NUMBER",
+      "required": true
+    }
+},
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    }
+  ],
+   "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
